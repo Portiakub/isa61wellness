@@ -34,8 +34,8 @@ header{
   width:100%;
   padding:15px 30px;
   text-align:center;
-  background:rgba(122,31,61,0.35); /* maroon see-through */
-  backdrop-filter:blur(10px);
+  background:rgba(122,31,61,0.8); /* stronger maroon for visibility */
+  backdrop-filter:blur(5px);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -80,6 +80,7 @@ header img.logo{
   background-size:cover;
   background-position:center;
   animation:fade 18s infinite;
+  opacity:0;
 }
 
 .slide:nth-child(1){background-image:url("office environment.jpg");animation-delay:0s;}
@@ -163,9 +164,9 @@ header img.logo{
   transform:scale(1.05);
 }
 
-/* SOFT COLOR SECTION */
+/* SOFT PINK SECTION */
 .soft{
-  background:#ffe0e8; /* gentle toned pink */
+  background:#ffe6eb; /* soft pink */
 }
 
 /* BOOKING FORM */
@@ -220,14 +221,15 @@ button{
   font-weight:bold;
 }
 
-/* FOOTER WITH GLASSY MAROON */
+/* FOOTER SOLID PINK */
 footer{
   text-align:center;
   padding:20px;
-  background:rgba(122,31,61,0.35); /* maroon see-through footer */
-  color:white;
-  backdrop-filter:blur(10px);
+  background:#ffe6eb; /* solid soft pink footer */
+  color:#7a1f3d;
+  font-weight:bold;
 }
+
 </style>
 </head>
 
