@@ -5,58 +5,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ISA61 Life Wellness</title>
+<title>ISA62 Life Wellness | Counselling & Psychosocial Support</title>
 
-<meta name="description" content="ISA61 Life Wellness offers professional psychosocial support, trauma counselling, wellness and therapy services in Pinetown, South Africa.">
-<meta name="keywords" content="therapy, counselling, trauma support, wellness, psychologist, social worker">
-<meta name="author" content="ISA61 Life Wellness">
+<meta name="description" content="ISA62 Life Wellness provides professional counselling, trauma debriefing, marriage counselling, stress management and psychosocial support in Pinetown.">
+
+<meta name="keywords" content="counselling, therapist pinetown, trauma counselling, marriage counselling, psychosocial support, wellness therapy">
+
+<meta name="author" content="ISA62 Life Wellness">
 
 <style>
 
-/* GENERAL */
-
-body{
+*{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#fafafa;
-color:#7a1f3d;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 scroll-behavior:smooth;
 }
 
-/* GLASS HEADER */
+/* BODY */
+
+body{
+background:#ffffff;
+color:#333;
+line-height:1.6;
+}
+
+/* HEADER */
 
 header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(122,31,61,0.6);
-backdrop-filter:blur(8px);
-padding:15px 0;
+padding:15px;
+text-align:center;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(4px);
 z-index:1000;
-}
-
-nav{
-display:flex;
-justify-content:center;
-gap:40px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
-font-size:15px;
+margin:0 20px;
+font-size:16px;
+font-weight:500;
+}
+
+nav a:hover{
+opacity:0.7;
 }
 
 /* HERO SLIDESHOW */
 
 .hero{
-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
+height:100vh;
 position:relative;
 overflow:hidden;
 }
@@ -67,52 +70,46 @@ width:100%;
 height:100%;
 background-size:cover;
 background-position:center;
-opacity:0;
-animation:fade 20s infinite;
+animation:fade 18s infinite;
 }
 
 .slide:nth-child(1){background-image:url("office environment.jpg");animation-delay:0s;}
-.slide:nth-child(2){background-image:url("counselling spaces.jpg");animation-delay:5s;}
-.slide:nth-child(3){background-image:url("therapy sessions.jpg");animation-delay:10s;}
-.slide:nth-child(4){background-image:url("wellness activities.jpg");animation-delay:15s;}
+.slide:nth-child(2){background-image:url("counselling spaces.jpg");animation-delay:6s;}
+.slide:nth-child(3){background-image:url("therapy sessions.jpg");animation-delay:12s;}
 
 @keyframes fade{
+
 0%{opacity:0}
-5%{opacity:1}
-25%{opacity:1}
-30%{opacity:0}
+10%{opacity:1}
+33%{opacity:1}
+43%{opacity:0}
 100%{opacity:0}
+
 }
 
-.hero-content{
-position:relative;
-z-index:10;
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+text-align:center;
+background:rgba(0,0,0,0.4);
+padding:30px;
+border-radius:10px;
 }
 
-.hero h1{
-font-size:48px;
-margin:0;
+.hero-text h1{
+font-size:40px;
 }
 
-.hero p{
-font-size:22px;
-}
-
-/* SECTION */
+/* SECTIONS */
 
 .section{
-padding:90px 10%;
-max-width:1100px;
-margin:auto;
-opacity:0;
-transform:translateY(40px);
-transition:all 1s;
+padding:80px 10%;
 }
 
-.section.show{
-opacity:1;
-transform:translateY(0);
-}
+/* TWO COLUMN */
 
 .two-column{
 display:flex;
@@ -126,26 +123,31 @@ width:420px;
 border-radius:10px;
 }
 
-/* LIGHT SECTION */
-
-.soft{
-background:#f5e7ea;
-}
-
 /* GALLERY */
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+display:flex;
+flex-wrap:wrap;
 gap:15px;
-margin-top:30px;
+justify-content:center;
 }
 
 .gallery img{
-width:100%;
-height:200px;
+width:260px;
+height:180px;
 object-fit:cover;
 border-radius:10px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* SOFT COLOR SECTION */
+
+.soft{
+background:#f3f6f8;
 }
 
 /* BOOKING FORM */
@@ -153,75 +155,63 @@ border-radius:10px;
 form{
 max-width:500px;
 margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
 }
 
 input, textarea{
+width:100%;
 padding:12px;
+margin:10px 0;
 border-radius:6px;
 border:1px solid #ccc;
-font-size:15px;
 }
 
 button{
-background:#7a1f3d;
+padding:12px 25px;
+background:#333;
 color:white;
 border:none;
-padding:14px;
-border-radius:6px;
-font-size:16px;
+border-radius:5px;
 cursor:pointer;
 }
 
 /* MAP SECTION */
 
 .map-section{
-background-image:url("office environment.jpg");
-background-size:cover;
-background-position:center;
+background:url("wellness activities.jpg") center/cover;
 color:white;
 text-align:center;
 padding:100px 10%;
 }
 
-.map-container{
-background:rgba(0,0,0,0.6);
-padding:30px;
+.map-section iframe{
+margin-top:30px;
 border-radius:10px;
-}
-
-iframe{
 width:100%;
 height:350px;
-border:none;
-margin-top:20px;
-}
-
-/* GLASS FOOTER */
-
-footer{
-background:rgba(122,31,61,0.7);
-backdrop-filter:blur(8px);
-color:white;
-text-align:center;
-padding:20px;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:20px;
+right:20px;
 background:#25D366;
 color:white;
-padding:14px 20px;
-border-radius:30px;
+padding:15px 20px;
+border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:rgba(0,0,0,0.35);
+color:white;
+backdrop-filter:blur(4px);
 }
 
 </style>
@@ -234,38 +224,30 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 
 <nav>
 
-<a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
-<a href="#booking">Booking</a>
+<a href="#booking">Book Session</a>
 <a href="#contact">Contact</a>
 
 </nav>
 
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="slide"></div>
 <div class="slide"></div>
 <div class="slide"></div>
-<div class="slide"></div>
 
-<div class="hero-content">
+<div class="hero-text">
 
-<h1>ISA61 Life Wellness</h1>
-<p>To empower Victims to be Victorious</p>
+<h1>ISA62 Life Wellness</h1>
+<p>Empowering Victims to be Victorious</p>
 
 </div>
 
 </section>
-
-
-<!-- ABOUT -->
 
 <section id="about" class="section">
 
@@ -277,13 +259,11 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 
 <h2>Psychosocial Support Services</h2>
 
-<p>
-Portia Kubheka is a qualified Social Worker and Therapist with more than 10 years of experience providing psychosocial support and counselling services.
-</p>
+<p>Portia Kubheka is a qualified Social Worker and Therapist with a Bachelor of Social Work degree from UNISA and a Certificate in Employee Wellness from the University of Pretoria.</p>
 
-<p>
-She holds a Bachelor of Social Work from UNISA and a Certificate in Employee Wellness from the University of Pretoria.
-</p>
+<p>She has over 10 years of professional experience supporting individuals experiencing stress, trauma, anxiety and depression.</p>
+
+<p>Portia previously worked at the Open Door Crisis Care Centre for seven years providing counselling and psychosocial support.</p>
 
 </div>
 
@@ -291,33 +271,27 @@ She holds a Bachelor of Social Work from UNISA and a Certificate in Employee Wel
 
 </section>
 
-
-<!-- SERVICES -->
-
 <section id="services" class="section soft">
 
-<h2>Areas of Expertise</h2>
+<h2 style="text-align:center;margin-bottom:30px">Areas of Expertise</h2>
 
-<ul>
+<ul style="max-width:800px;margin:auto">
 
 <li>Trauma Debriefing</li>
-<li>Stress and anxiety counselling</li>
-<li>Substance abuse support</li>
-<li>Family and relationship counselling</li>
-<li>Marriage counselling</li>
-<li>Children behavioural issues</li>
-<li>Gender based violence support</li>
+<li>Stress and Anxiety Counselling</li>
+<li>Substance Abuse Support</li>
+<li>Marriage and Relationship Counselling</li>
+<li>Pre-marital Counselling</li>
+<li>Gender Based Violence Support</li>
+<li>Parenting Guidance</li>
 
 </ul>
 
 </section>
 
-
-<!-- GALLERY -->
-
 <section id="gallery" class="section">
 
-<h2>Wellness & Therapy Environment</h2>
+<h2 style="text-align:center;margin-bottom:40px">Therapy Environment</h2>
 
 <div class="gallery">
 
@@ -335,101 +309,58 @@ She holds a Bachelor of Social Work from UNISA and a Certificate in Employee Wel
 <img src="photo12.jpg">
 <img src="photo13.jpg">
 
-<img src="counselling spaces.jpg">
-<img src="therapy sessions.jpg">
-<img src="wellness activities.jpg">
-
 </div>
 
 </section>
 
-
-<!-- BOOKING -->
-
 <section id="booking" class="section soft">
 
-<h2 style="text-align:center">Book a Counselling Session</h2>
+<h2 style="text-align:center;margin-bottom:20px">Book a Counselling Session</h2>
 
-<form action="mailto:portiakub@outlook.com" method="post" enctype="text/plain">
+<form action="https://formsubmit.co/portiakub@outlook.com" method="POST">
 
-<input type="text" name="name" placeholder="Full Name" required>
+<input type="text" name="Name" placeholder="Your Name" required>
 
-<input type="email" name="email" placeholder="Email Address" required>
+<input type="email" name="Email" placeholder="Your Email" required>
 
-<input type="tel" name="phone" placeholder="Phone Number">
+<input type="text" name="Phone" placeholder="Phone Number">
 
-<textarea name="message" rows="4" placeholder="Message"></textarea>
+<textarea name="Message" placeholder="Describe the support you need"></textarea>
 
-<button type="submit">Submit Booking Request</button>
+<button type="submit">Book Appointment</button>
 
 </form>
 
 </section>
 
-
-<!-- CONTACT -->
-
 <section id="contact" class="map-section">
 
-<div class="map-container">
-
-<h2>Visit Our Office</h2>
+<h2>Visit Our Centre</h2>
 
 <p>
-
 51 Josiah Gumede Road<br>
 Medical Centre<br>
-Pinetown, 3610<br><br>
+Pinetown, 3610
+</p>
 
+<p>
 Cell: 084 555 8406 / 065 311 4025<br>
-Email: <a style="color:#fff" href="mailto:portiakub@outlook.com">portiakub@outlook.com</a>
-
+Email: portiakub@outlook.com
 </p>
 
 <iframe src="https://maps.google.com/maps?q=51%20Josiah%20Gumede%20Road%20Pinetown&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 
-</div>
-
 </section>
-
 
 <footer>
 
-<p>ISA61 Life Wellness</p>
+<p>ISA62 Life Wellness</p>
 
-<p>Website Developed by <strong>Mthobisi Mabaso</strong></p>
+<p>Website Developed by Mthobisi Mabaso</p>
 
 </footer>
 
-
-<a class="whatsapp" href="https://wa.me/27845558406" target="_blank">
-
-Chat on WhatsApp
-
-</a>
-
-
-<script>
-
-/* SCROLL ANIMATION */
-
-const sections=document.querySelectorAll(".section");
-
-window.addEventListener("scroll",()=>{
-
-sections.forEach(section=>{
-
-const top=section.getBoundingClientRect().top;
-
-if(top<window.innerHeight-100){
-section.classList.add("show");
-}
-
-});
-
-});
-
-</script>
+<a class="whatsapp" href="https://wa.me/27653114025">WhatsApp</a>
 
 </body>
 </html>
