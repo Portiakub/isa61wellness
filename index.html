@@ -1,63 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Isa61 Wellness | Healing & Restoration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Isa61 Wellness</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+color:#333;
+}
+
+.hero{
+background:url("office environment.jpg") center/cover no-repeat;
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.logo{
+width:160px;
+margin-bottom:15px;
+}
+
+h1{
+font-size:42px;
+margin:0;
+}
+
+h2{
+font-weight:300;
+margin-top:10px;
+}
+
+.section{
+padding:60px 10%;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.grid img{
+width:100%;
+border-radius:8px;
+}
+
+.services{
+background:#f5f1f3;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+}
+
+footer{
+background:#5a1f2d;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:32px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-<img src="logo.png1" alt="Isa61 Wellness Logo" style="width:150px; display:block; margin:auto;">
-    <hr class="soft-divider">
-<header>
-    <h1>Isa61 Wellness</h1>
-    <p>Healing & Restoration</p>
-</header>
+
+<!-- HERO SECTION -->
 
 <section class="hero">
-    <h2>You Are Heard. You Are Valued. You Can Heal.</h2>
-    <p>
-        Isa61 Wellness offers compassionate psychosocial support in a safe,
-        respectful, and confidential environment. We walk with you on your
-        journey toward healing and emotional well-being.
-    </p>
+
+<div class="hero-content">
+
+<img src="logo.png.png" class="logo">
+
+<h1>Isa61 Wellness</h1>
+
+<h2>Healing & Restoration</h2>
+
+</div>
+
 </section>
 
-<section class="section white">
-    <h3>About Us</h3>
-    <p>
-        Isa61 Wellness is led by <strong>Portia Kubheka</strong>, a qualified
-        Social Worker and Therapist. Our mission is to restore dignity,
-        empower individuals, and promote emotional resilience.
-    </p>
+
+<!-- ABOUT PORTIA -->
+
+<section class="section">
+
+<div class="grid">
+
+<div>
+
+<h2>Psychosocial Support Services</h2>
+
+<p>
+Portia Kubheka is a qualified Social Worker and Therapist. She holds a Bachelor of Social Work degree from UNISA where she majored in Psychology, and a Certificate in Employee Wellness from the University of Pretoria.
+</p>
+
+<p>
+Portia attends professional training regularly to deepen her knowledge and better support employees in managing stress, anxiety and depression effectively.
+</p>
+
+<p>
+She has over 10 years experience serving people from diverse cultures and backgrounds.
+</p>
+
+</div>
+
+<div>
+
+<img src="portia.jpg.jpg">
+
+</div>
+
+</div>
+
 </section>
 
-<section class="section pink">
-    <h3>Our Services</h3>
-    <ul>
-        <li>Psychosocial Support & Counselling</li>
-        <li>Trauma Debriefing</li>
-        <li>Gender-Based Violence Support</li>
-        <li>Substance Abuse Support</li>
-        <li>School & Community Awareness Programs</li>
-        <li>Employee Wellness Support</li>
-    </ul>
+
+<!-- EXPERIENCE -->
+
+<section class="section services">
+
+<h2>Professional Experience</h2>
+
+<p>
+
+Portia worked for the Open Door Crisis Care Centre for seven years (2016–2023) where she gained extensive experience in psychosocial counselling and trauma support.
+
+</p>
+
+<p>
+
+In August 2023 she launched her private practice <b>ISA61 LIFE WELLNESS</b>, operating from:
+
+</p>
+
+<p>
+
+Union Main Wellness  
+45 Josiah Gumede Road  
+Pinetown
+
+</p>
+
 </section>
 
-<section class="section white">
-    <h3>Contact Us</h3>
-    <p><strong>📍 Address:</strong> Pinetown, KwaZulu-Natal</p>
-    <p><strong>📞 Phone:</strong> 065 311 4025 / 084 555 8406</p>
-    <p><strong>✉ Email:</strong> portiakub@outlook.com</p>
+
+<!-- EXPERTISE -->
+
+<section class="section">
+
+<h2>Areas of Expertise</h2>
+
+<ul>
+
+<li>Trauma Debriefing (Loss, grief, bereavement, hijacking)</li>
+<li>Anger issues, stress, depression and anxiety</li>
+<li>Psychological, emotional and sexual assault issues</li>
+<li>Substance and alcohol abuse</li>
+<li>Family conflict and relationship issues</li>
+<li>Pre-marital counselling</li>
+<li>Marriage counselling</li>
+<li>Children behavioural issues and bullying</li>
+<li>Gender Based Violence</li>
+<li>Parenting support</li>
+<li>Co-parenting skills</li>
+
+</ul>
+
 </section>
+
+
+<!-- CORPORATE SERVICES -->
+
+<section class="section services">
+
+<h2>Employee Wellness Services</h2>
+
+<p>
+
+Portia provides:
+
+</p>
+
+<ul>
+
+<li>One-on-One counselling sessions</li>
+<li>Group Trauma Debriefing</li>
+<li>Employee wellness awareness programs</li>
+
+</ul>
+
+<p>
+
+She is affiliated with:
+
+</p>
+
+<ul>
+
+<li>Proactive Health Solutions</li>
+<li>Life Health Solutions</li>
+<li>Reality Wellness</li>
+<li>Momentum</li>
+<li>Discovery</li>
+
+</ul>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="section">
+
+<h2>Our Wellness Environment</h2>
+
+<div class="gallery">
+
+<img src="therapy sessions.jpg">
+<img src="wellness activities.jpg">
+<img src="counselling spaces.jpg">
+<img src="Photo1.jpg">
+<img src="Photo2.PNG">
+<img src="Photo3.PNG">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo7.jpg">
+<img src="photo9.jpg">
+
+</div>
+
+</section>
+
+
+<!-- MOTTO -->
+
+<section class="section services">
+
+<h2>Our Motto</h2>
+
+<p style="font-size:22px">
+
+“To empower Victims to be Victorious.”
+
+</p>
+
+</section>
+
 
 <footer>
-    <p>© 2026 Isa61 Wellness | Healing & Restoration</p>
+
+<p>© 2026 Isa61 Wellness</p>
+
+<p>Healing • Restoration • Empowerment</p>
+
+<p style="font-size:14px;opacity:0.8;">
+Website developed by <strong>Mthobisi Mabaso</strong>
+</p>
+
 </footer>
 
-<a href="https://wa.me/27653114025" class="whatsapp" target="_blank">
-    💬 Chat on WhatsApp
-</a>
+
+<a class="whatsapp" href="https://wa.me/27739761359">Chat on WhatsApp</a>
+
 
 </body>
 </html>
