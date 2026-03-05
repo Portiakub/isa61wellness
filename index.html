@@ -170,7 +170,7 @@ header img.logo{
   position:relative;
   border-radius:10px;
   padding:80px 10%;
-  color:white;
+  color:#7a1f3d; /* MAROON TEXT */
 }
 
 .soft.expertise::before{
@@ -187,6 +187,11 @@ header img.logo{
   z-index:1;
 }
 
+.soft.expertise ul li:hover{
+  color:white; /* hover effect for emphasis */
+  font-weight:bold;
+}
+
 /* BOOKING FORM SECTION WITH TRANSPARENT PINK BACKGROUND */
 form-container{
   max-width:500px;
@@ -196,6 +201,7 @@ form-container{
   padding:30px;
   background:rgba(255,198,210,0.45);
   border-radius:10px;
+  color:#7a1f3d; /* form text maroon */
 }
 
 form input, form textarea{
@@ -204,6 +210,11 @@ form input, form textarea{
   margin:10px 0;
   border-radius:6px;
   border:1px solid #ccc;
+}
+
+form input:focus, form textarea:focus{
+  outline:none;
+  border:1px solid #7a1f3d;
 }
 
 /* BUTTON */
@@ -216,13 +227,27 @@ button{
   cursor:pointer;
 }
 
+button:hover{
+  opacity:0.9;
+}
+
 /* MAP SECTION */
 .map-section{
   background:url("wellness activities.jpg") center/cover no-repeat;
-  color:white;
+  color:#7a1f3d; /* MAROON TEXT */
   text-align:center;
   padding:100px 10%;
   border-radius:10px;
+}
+
+.map-section a{
+  color:#7a1f3d; /* maroon links on map */
+  text-decoration:none;
+}
+
+.map-section a:hover{
+  color:white;
+  font-weight:bold;
 }
 
 .map-section iframe{
@@ -353,7 +378,7 @@ Pinetown, 3610
 </p>
 <p>
 Cell: 084 555 8406 / 065 311 4025<br>
-Email: <a href="mailto:portiakub@outlook.com" style="color:white;">portiakub@outlook.com</a>
+Email: <a href="mailto:portiakub@outlook.com">portiakub@outlook.com</a>
 </p>
 <iframe src="https://maps.google.com/maps?q=51%20Josiah%20Gumede%20Road%20Pinetown&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 </section>
