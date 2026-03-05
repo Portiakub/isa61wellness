@@ -1,21 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portia Wellness</title>
+<title>ISA61 Life Wellness</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#fafafa;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(122,31,61,0.35);
+backdrop-filter:blur(6px);
+padding:10px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+font-size:18px;
+font-weight:bold;
+color:white;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* HERO SLIDESHOW */
+
+.hero{
+height:80vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+animation:fade 20s infinite;
+}
+
+.slide:nth-child(1){background-image:url("office environment.jpg"); animation-delay:0s;}
+.slide:nth-child(2){background-image:url("counselling spaces.jpg"); animation-delay:5s;}
+.slide:nth-child(3){background-image:url("wellness activities.jpg"); animation-delay:10s;}
+.slide:nth-child(4){background-image:url("therapy sessions.jpg"); animation-delay:15s;}
+
+@keyframes fade{
+0%{opacity:0}
+5%{opacity:1}
+25%{opacity:1}
+30%{opacity:0}
+100%{opacity:0}
+}
+
+.hero-overlay{
+position:relative;
+background:rgba(255,255,255,0.7);
+padding:40px;
+border-radius:10px;
+color:#7a1f3d;
+}
+
+/* SECTION */
+
+.section{
+padding:80px 10%;
+}
+
+.two-column{
+display:flex;
+gap:40px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.two-column img{
+width:420px;
+border-radius:10px;
+}
+
+/* SOFT PINK SECTION */
+
+.soft-pink{
+background:#f7e6ea;
+}
+
+/* GALLERY */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+}
+
+.gallery img{
+width:280px;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+background:#7a1f3d;
+color:white;
+text-align:center;
+padding:12px;
+font-size:14px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+</style>
 
 </head>
 
 <body>
 
 <header>
-<div class="logo">Portia Wellness</div>
+
+<div class="logo">ISA61 Life Wellness</div>
 
 <nav>
 <a href="#">Home</a>
@@ -24,49 +176,54 @@
 <a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
-<h1>Welcome to Portia Wellness</h1>
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
 
-<p>Supporting mental wellness through counselling and healing spaces.</p>
+<div class="hero-overlay">
+
+<h1>ISA61 Life Wellness</h1>
+
+<p>“To empower Victims to be Victorious.”</p>
+
+</div>
 
 </section>
 
 
-<section id="about">
+<!-- ABOUT -->
 
-<h2>About Us</h2>
+<section id="about" class="section">
+
+<div class="two-column">
+
+<img src="Portia pic 20250509.jpg">
+
+<div>
+
+<h2>Psychosocial Support Services</h2>
 
 <p>
-Portia Wellness provides a safe and supportive space for healing,
-counselling and personal development.
+Portia Kubheka is a qualified Social Worker and Therapist with a Bachelor of Social Work degree from UNISA and a Certificate in Employee Wellness from the University of Pretoria.
 </p>
 
-</section>
+<p>
+She attends training regularly to improve her knowledge in supporting employees experiencing stress, anxiety, depression and trauma.
+</p>
 
+<p>
+Portia has over 10 years of experience working with individuals from diverse cultures and previously worked for the Open Door Crisis Care Centre for seven years.
+</p>
 
-<section id="services">
-
-<h2>Services</h2>
-
-<div class="service-grid">
-
-<div class="card">
-<h3>Counselling</h3>
-<p>Professional emotional and psychological support.</p>
-</div>
-
-<div class="card">
-<h3>Therapy</h3>
-<p>Guided therapy sessions for individuals and families.</p>
-</div>
-
-<div class="card">
-<h3>Wellness Programs</h3>
-<p>Activities designed to support mental health and well-being.</p>
 </div>
 
 </div>
@@ -74,55 +231,89 @@ counselling and personal development.
 </section>
 
 
-<section id="gallery">
+<!-- SERVICES -->
 
-<h2>Gallery</h2>
+<section id="services" class="section soft-pink">
+
+<h2 style="text-align:center">Areas of Expertise</h2>
+
+<ul>
+
+<li>Trauma Debriefing – Loss, grief, divorce, hijacking</li>
+<li>Stress, anger issues, depression and anxiety</li>
+<li>Psychological, emotional and sexual assault support</li>
+<li>Substance and alcohol abuse counselling</li>
+<li>Family conflict and relationship counselling</li>
+<li>Pre-marital counselling</li>
+<li>Marriage counselling</li>
+<li>Children behavioural issues and bullying</li>
+<li>Gender based violence support</li>
+<li>Parenting and co-parenting guidance</li>
+
+</ul>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery" class="section">
+
+<h2 style="text-align:center">Wellness & Therapy Environment</h2>
 
 <div class="gallery">
 
-<img src="images/photo1.jpg">
-<img src="images/photo2.jpg">
-<img src="images/photo3.jpg">
-<img src="images/photo4.jpg">
-<img src="images/photo5.jpg">
-<img src="images/photo6.jpg">
-<img src="images/photo7.jpg">
-<img src="images/photo8.jpg">
-<img src="images/photo9.jpg">
-<img src="images/photo10.jpg">
-<img src="images/photo11.jpg">
-<img src="images/photo12.jpg">
-<img src="images/photo13.jpg">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+<img src="photo7.jpg">
+<img src="photo8.jpg">
+<img src="photo9.jpg">
+<img src="photo10.jpg">
+<img src="photo11.jpg">
+<img src="photo12.jpg">
+<img src="photo13.jpg">
 
-<img src="images/office environment.jpg">
-<img src="images/counselling spaces.jpg">
-<img src="images/Portia pic 20250509.jpg">
-<img src="images/wellness activities.jpg">
-<img src="images/therapy sessions.jpg">
+<img src="counselling spaces.jpg">
+<img src="therapy sessions.jpg">
+<img src="wellness activities.jpg">
 
 </div>
 
 </section>
 
 
-<section id="contact">
+<!-- CONTACT -->
 
-<h2>Contact</h2>
+<section id="contact" class="section soft-pink">
 
-<p>Get in touch for appointments and enquiries.</p>
+<h2 style="text-align:center">Contact</h2>
+
+<p style="text-align:center">
+
+Book a counselling session or wellness consultation today.
+
+</p>
 
 </section>
 
 
 <footer>
 
-<p>© 2026 Portia Wellness</p>
+<p>ISA61 Life Wellness</p>
+
+<p>Website Developed by <strong>Mthobisi Mabaso</strong></p>
 
 </footer>
 
 
 <a class="whatsapp" href="https://wa.me/27739761359" target="_blank">
-WhatsApp
+
+Chat on WhatsApp
+
 </a>
 
 
