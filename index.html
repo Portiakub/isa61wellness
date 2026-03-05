@@ -1,4 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ISA62 Life Wellness | Counselling & Psychosocial Support</title>
+
+<meta name="description" content="ISA62 Life Wellness provides professional counselling, trauma debriefing, marriage counselling, stress management and psychosocial support in Pinetown.">
+<meta name="keywords" content="counselling, therapist pinetown, trauma counselling, marriage counselling, psychosocial support, wellness therapy">
+<meta name="author" content="ISA62 Life Wellness">
+
 <style>
+/* GENERAL */
 *{
   margin:0;
   padding:0;
@@ -8,7 +22,7 @@
 }
 
 body{
-  background:#ffffff;
+  background:#ffe6eb; /* soft pink background */
   color:#333;
   line-height:1.6;
 }
@@ -20,7 +34,7 @@ header{
   width:100%;
   padding:15px 30px;
   text-align:center;
-  background:rgba(122,31,61,0.35); /* maroon with transparency */
+  background:rgba(122,31,61,0.35); /* maroon see-through */
   backdrop-filter:blur(10px);
   display:flex;
   justify-content:center;
@@ -151,7 +165,7 @@ header img.logo{
 
 /* SOFT COLOR SECTION */
 .soft{
-  background:#f3f6f8;
+  background:#ffe0e8; /* gentle toned pink */
 }
 
 /* BOOKING FORM */
@@ -214,5 +228,125 @@ footer{
   color:white;
   backdrop-filter:blur(10px);
 }
-
 </style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#booking">Book Session</a>
+<a href="#contact">Contact</a>
+</nav>
+<img src="logo.png" alt="ISA62 Logo" class="logo">
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+
+<div class="hero-text">
+<h1>ISA62 Life Wellness</h1>
+<p>Empowering Victims to be Victorious</p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+<div class="two-column">
+<img src="Portia pic 20250509.jpg">
+<div>
+<h2>Psychosocial Support Services</h2>
+<p>Portia Kubheka is a qualified Social Worker and Therapist with a Bachelor of Social Work degree from UNISA and a Certificate in Employee Wellness from the University of Pretoria.</p>
+<p>She has over 10 years of professional experience supporting individuals experiencing stress, trauma, anxiety and depression.</p>
+<p>Portia previously worked at the Open Door Crisis Care Centre for seven years providing counselling and psychosocial support.</p>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section soft">
+<h2 style="text-align:center;margin-bottom:30px">Areas of Expertise</h2>
+<ul style="max-width:800px;margin:auto">
+<li>Trauma Debriefing</li>
+<li>Stress and Anxiety Counselling</li>
+<li>Substance Abuse Support</li>
+<li>Marriage and Relationship Counselling</li>
+<li>Pre-marital Counselling</li>
+<li>Gender Based Violence Support</li>
+<li>Parenting Guidance</li>
+</ul>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+<h2 style="text-align:center;margin-bottom:40px">Therapy Environment</h2>
+<div class="gallery">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+<img src="photo7.jpg">
+<img src="photo8.jpg">
+<img src="photo9.jpg">
+<img src="photo10.jpg">
+<img src="photo11.jpg">
+<img src="photo12.jpg">
+<img src="photo13.jpg">
+</div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="section soft">
+<h2 style="text-align:center;margin-bottom:20px">Book a Counselling Session</h2>
+<form action="https://formsubmit.co/portiakub@outlook.com" method="POST">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<input type="text" name="Phone" placeholder="Phone Number">
+<textarea name="Message" placeholder="Describe the support you need"></textarea>
+<button type="submit">Book Appointment</button>
+</form>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="map-section">
+<h2>Visit Our Centre</h2>
+<p>
+51 Josiah Gumede Road<br>
+Medical Centre<br>
+Pinetown, 3610
+</p>
+<p>
+Cell: 084 555 8406 / 065 311 4025<br>
+Email: <a href="mailto:portiakub@outlook.com" style="color:white;">portiakub@outlook.com</a>
+</p>
+<iframe src="https://maps.google.com/maps?q=51%20Josiah%20Gumede%20Road%20Pinetown&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<footer>
+<p>ISA62 Life Wellness</p>
+<p>Website Developed by Mthobisi Mabaso</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/27653114025">WhatsApp</a>
+
+<script>
+/* SCROLL ANIMATION */
+const sections=document.querySelectorAll(".section");
+window.addEventListener("scroll",()=>{
+sections.forEach(section=>{
+const top=section.getBoundingClientRect().top;
+if(top<window.innerHeight-100){section.classList.add("show");}
+});
+});
+</script>
+
+</body>
+</html>
