@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,26 +7,30 @@
 
 <title>ISA61 Life Wellness</title>
 
-<meta name="description" content="ISA61 Life Wellness offers professional psychosocial support, trauma counselling, wellness services and therapy in South Africa.">
-<meta name="keywords" content="counselling, therapy, trauma support, wellness, social worker">
+<meta name="description" content="ISA61 Life Wellness offers professional psychosocial support, trauma counselling, wellness and therapy services in Pinetown, South Africa.">
+<meta name="keywords" content="therapy, counselling, trauma support, wellness, psychologist, social worker">
 <meta name="author" content="ISA61 Life Wellness">
 
 <style>
+
+/* GENERAL */
 
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:#fafafa;
 color:#7a1f3d;
+scroll-behavior:smooth;
 }
 
-/* HEADER */
+/* GLASS HEADER */
 
 header{
 position:fixed;
 top:0;
 width:100%;
-background:#7a1f3d;
+background:rgba(122,31,61,0.6);
+backdrop-filter:blur(8px);
 padding:15px 0;
 z-index:1000;
 }
@@ -45,7 +48,7 @@ font-weight:bold;
 font-size:15px;
 }
 
-/* HERO */
+/* HERO SLIDESHOW */
 
 .hero{
 height:90vh;
@@ -123,7 +126,7 @@ width:420px;
 border-radius:10px;
 }
 
-/* LIGHT BACKGROUND */
+/* LIGHT SECTION */
 
 .soft{
 background:#f5e7ea;
@@ -145,7 +148,7 @@ object-fit:cover;
 border-radius:10px;
 }
 
-/* FORM */
+/* BOOKING FORM */
 
 form{
 max-width:500px;
@@ -172,23 +175,38 @@ font-size:16px;
 cursor:pointer;
 }
 
-/* MAP */
+/* MAP SECTION */
 
-.map{
-margin-top:40px;
-width:100%;
-height:400px;
-border:none;
-}
-
-/* FOOTER */
-
-footer{
-background:#7a1f3d;
+.map-section{
+background-image:url("office environment.jpg");
+background-size:cover;
+background-position:center;
 color:white;
 text-align:center;
-padding:15px;
-font-size:14px;
+padding:100px 10%;
+}
+
+.map-container{
+background:rgba(0,0,0,0.6);
+padding:30px;
+border-radius:10px;
+}
+
+iframe{
+width:100%;
+height:350px;
+border:none;
+margin-top:20px;
+}
+
+/* GLASS FOOTER */
+
+footer{
+background:rgba(122,31,61,0.7);
+backdrop-filter:blur(8px);
+color:white;
+text-align:center;
+padding:20px;
 }
 
 /* WHATSAPP */
@@ -260,7 +278,7 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 <h2>Psychosocial Support Services</h2>
 
 <p>
-Portia Kubheka is a qualified Social Worker and Therapist with more than 10 years of experience providing psychosocial support.
+Portia Kubheka is a qualified Social Worker and Therapist with more than 10 years of experience providing psychosocial support and counselling services.
 </p>
 
 <p>
@@ -332,13 +350,15 @@ She holds a Bachelor of Social Work from UNISA and a Certificate in Employee Wel
 
 <h2 style="text-align:center">Book a Counselling Session</h2>
 
-<form>
+<form action="mailto:portiakub@outlook.com" method="post" enctype="text/plain">
 
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="tel" placeholder="Phone Number">
+<input type="text" name="name" placeholder="Full Name" required>
 
-<textarea rows="4" placeholder="Message"></textarea>
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<textarea name="message" rows="4" placeholder="Message"></textarea>
 
 <button type="submit">Submit Booking Request</button>
 
@@ -347,15 +367,28 @@ She holds a Bachelor of Social Work from UNISA and a Certificate in Employee Wel
 </section>
 
 
-<!-- CONTACT + MAP -->
+<!-- CONTACT -->
 
-<section id="contact" class="section">
+<section id="contact" class="map-section">
 
-<h2 style="text-align:center">Our Location</h2>
+<div class="map-container">
 
-<iframe class="map"
-src="https://maps.google.com/maps?q=pretoria&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
+<h2>Visit Our Office</h2>
+
+<p>
+
+51 Josiah Gumede Road<br>
+Medical Centre<br>
+Pinetown, 3610<br><br>
+
+Cell: 084 555 8406 / 065 311 4025<br>
+Email: <a style="color:#fff" href="mailto:portiakub@outlook.com">portiakub@outlook.com</a>
+
+</p>
+
+<iframe src="https://maps.google.com/maps?q=51%20Josiah%20Gumede%20Road%20Pinetown&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
 
 </section>
 
@@ -369,7 +402,7 @@ src="https://maps.google.com/maps?q=pretoria&t=&z=13&ie=UTF8&iwloc=&output=embed
 </footer>
 
 
-<a class="whatsapp" href="https://wa.me/27739761359" target="_blank">
+<a class="whatsapp" href="https://wa.me/27845558406" target="_blank">
 
 Chat on WhatsApp
 
