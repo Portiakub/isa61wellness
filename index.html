@@ -14,7 +14,7 @@ body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:#fafafa;
-color:#333;
+color:#7a1f3d;
 }
 
 /* HEADER */
@@ -23,38 +23,35 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(122,31,61,0.35);
-backdrop-filter:blur(6px);
-padding:10px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(8px);
+padding:12px 0;
 z-index:1000;
+text-align:center;
 }
 
-.logo{
-font-size:18px;
-font-weight:bold;
-color:white;
+nav{
+display:flex;
+justify-content:center;
+gap:35px;
 }
 
 nav a{
-color:white;
-margin-left:20px;
 text-decoration:none;
-font-size:14px;
+color:#7a1f3d;
+font-weight:600;
+font-size:15px;
 }
 
 /* HERO SLIDESHOW */
 
 .hero{
-height:80vh;
+height:85vh;
 position:relative;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white;
 overflow:hidden;
 }
 
@@ -68,10 +65,10 @@ opacity:0;
 animation:fade 20s infinite;
 }
 
-.slide:nth-child(1){background-image:url("office environment.jpg"); animation-delay:0s;}
-.slide:nth-child(2){background-image:url("counselling spaces.jpg"); animation-delay:5s;}
-.slide:nth-child(3){background-image:url("wellness activities.jpg"); animation-delay:10s;}
-.slide:nth-child(4){background-image:url("therapy sessions.jpg"); animation-delay:15s;}
+.slide:nth-child(1){background-image:url("office environment.jpg");animation-delay:0s;}
+.slide:nth-child(2){background-image:url("counselling spaces.jpg");animation-delay:5s;}
+.slide:nth-child(3){background-image:url("wellness activities.jpg");animation-delay:10s;}
+.slide:nth-child(4){background-image:url("therapy sessions.jpg");animation-delay:15s;}
 
 @keyframes fade{
 0%{opacity:0}
@@ -83,55 +80,90 @@ animation:fade 20s infinite;
 
 .hero-overlay{
 position:relative;
-background:rgba(255,255,255,0.7);
-padding:40px;
-border-radius:10px;
-color:#7a1f3d;
+background:rgba(255,255,255,0.8);
+padding:45px;
+border-radius:12px;
 }
 
-/* SECTION */
+.hero h1{
+margin:0;
+font-size:42px;
+}
+
+.hero p{
+font-style:italic;
+}
+
+/* SECTIONS */
 
 .section{
 padding:80px 10%;
+max-width:1100px;
+margin:auto;
 }
 
 .two-column{
 display:flex;
+flex-wrap:wrap;
 gap:40px;
 align-items:center;
-flex-wrap:wrap;
 }
 
 .two-column img{
 width:420px;
-border-radius:10px;
+border-radius:12px;
 }
 
-/* SOFT PINK SECTION */
+.soft-bg{
+background:#f7ecef;
+}
 
-.soft-pink{
-background:#f7e6ea;
+/* LISTS */
+
+ul{
+line-height:1.9;
 }
 
 /* GALLERY */
 
 .gallery{
-display:flex;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:15px;
-justify-content:center;
+margin-top:30px;
 }
 
 .gallery img{
-width:280px;
+width:100%;
 height:200px;
 object-fit:cover;
 border-radius:10px;
+cursor:pointer;
 transition:0.3s;
 }
 
 .gallery img:hover{
 transform:scale(1.05);
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:80%;
+border-radius:10px;
 }
 
 /* FOOTER */
@@ -140,11 +172,11 @@ footer{
 background:#7a1f3d;
 color:white;
 text-align:center;
-padding:12px;
+padding:14px;
 font-size:14px;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -167,14 +199,14 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 
 <header>
 
-<div class="logo">ISA61 Life Wellness</div>
-
 <nav>
+
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
@@ -192,7 +224,6 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 <div class="hero-overlay">
 
 <h1>ISA61 Life Wellness</h1>
-
 <p>“To empower Victims to be Victorious.”</p>
 
 </div>
@@ -213,15 +244,11 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 <h2>Psychosocial Support Services</h2>
 
 <p>
-Portia Kubheka is a qualified Social Worker and Therapist with a Bachelor of Social Work degree from UNISA and a Certificate in Employee Wellness from the University of Pretoria.
+Portia Kubheka is a qualified Social Worker and Therapist holding a Bachelor of Social Work from UNISA and a Certificate in Employee Wellness from the University of Pretoria.
 </p>
 
 <p>
-She attends training regularly to improve her knowledge in supporting employees experiencing stress, anxiety, depression and trauma.
-</p>
-
-<p>
-Portia has over 10 years of experience working with individuals from diverse cultures and previously worked for the Open Door Crisis Care Centre for seven years.
+She has more than 10 years of experience supporting individuals dealing with stress, trauma, grief and emotional challenges.
 </p>
 
 </div>
@@ -233,7 +260,7 @@ Portia has over 10 years of experience working with individuals from diverse cul
 
 <!-- SERVICES -->
 
-<section id="services" class="section soft-pink">
+<section id="services" class="section soft-bg">
 
 <h2 style="text-align:center">Areas of Expertise</h2>
 
@@ -241,14 +268,12 @@ Portia has over 10 years of experience working with individuals from diverse cul
 
 <li>Trauma Debriefing – Loss, grief, divorce, hijacking</li>
 <li>Stress, anger issues, depression and anxiety</li>
-<li>Psychological, emotional and sexual assault support</li>
+<li>Psychological and emotional trauma support</li>
 <li>Substance and alcohol abuse counselling</li>
-<li>Family conflict and relationship counselling</li>
-<li>Pre-marital counselling</li>
-<li>Marriage counselling</li>
-<li>Children behavioural issues and bullying</li>
+<li>Family and relationship counselling</li>
+<li>Pre-marital and marriage counselling</li>
+<li>Children behavioural issues</li>
 <li>Gender based violence support</li>
-<li>Parenting and co-parenting guidance</li>
 
 </ul>
 
@@ -288,13 +313,13 @@ Portia has over 10 years of experience working with individuals from diverse cul
 
 <!-- CONTACT -->
 
-<section id="contact" class="section soft-pink">
+<section id="contact" class="section soft-bg">
 
 <h2 style="text-align:center">Contact</h2>
 
 <p style="text-align:center">
 
-Book a counselling session or wellness consultation today.
+Book an appointment or wellness consultation today.
 
 </p>
 
@@ -316,6 +341,32 @@ Chat on WhatsApp
 
 </a>
 
+
+<div class="lightbox" id="lightbox">
+
+<img id="lightbox-img">
+
+</div>
+
+
+<script>
+
+const images=document.querySelectorAll(".gallery img");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+images.forEach(img=>{
+img.onclick=()=>{
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+};
+});
+
+lightbox.onclick=()=>{
+lightbox.style.display="none";
+};
+
+</script>
 
 </body>
 </html>
