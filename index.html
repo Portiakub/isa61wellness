@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
 
 <title>ISA62 Life Wellness | Counselling & Psychosocial Support</title>
 
-<meta name="description" content="ISA62 Life Wellness provides professional counselling, trauma debriefing, marriage counselling, stress management and psychosocial support in Pinetown.">
+<meta name="description" content="ISA62 Life Wellness provides professional counselling, trauma debriefing, marriage counselling and psychosocial support in Pinetown.">
 
 <style>
 
@@ -32,16 +33,16 @@ position:fixed;
 top:0;
 width:100%;
 padding:15px 30px;
-background:rgba(122,31,61,0.9);
+background:rgba(122,31,61,0.95);
 display:flex;
 justify-content:center;
 align-items:center;
 z-index:1000;
 }
 
-header nav{
+nav{
 display:flex;
-gap:40px;
+gap:30px;
 }
 
 nav a{
@@ -54,7 +55,7 @@ nav a:hover{
 opacity:0.7;
 }
 
-header img.logo{
+.logo{
 position:absolute;
 right:20px;
 height:50px;
@@ -107,16 +108,14 @@ top:50%;
 left:50%;
 transform:translate(-50%,-50%);
 text-align:center;
-padding:30px;
-border:2px solid rgba(122,31,61,0.5);
+padding:35px;
 border-radius:10px;
-backdrop-filter:blur(3px);
+background:rgba(0,0,0,0.25);
 }
 
 .hero-text h1{
-font-size:42px;
+font-size:44px;
 color:#c4a484;
-text-shadow:2px 2px 6px rgba(0,0,0,0.4);
 }
 
 .hero-text p{
@@ -127,13 +126,20 @@ color:#c4a484;
 /* SECTIONS */
 
 .section{
-padding:80px 10%;
+padding:90px 10%;
 }
+
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+/* ABOUT */
 
 .two-column{
 display:flex;
-flex-wrap:wrap;
 gap:40px;
+flex-wrap:wrap;
 align-items:center;
 }
 
@@ -142,12 +148,25 @@ width:420px;
 border-radius:10px;
 }
 
-/* SERVICES */
+/* SERVICES CARDS */
 
-.expertise{
-background:url("wellness activities.jpg") center/cover no-repeat;
-padding:80px 10%;
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:white;
+padding:25px;
 border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
 }
 
 /* GALLERY */
@@ -164,11 +183,6 @@ height:200px;
 object-fit:cover;
 border-radius:10px;
 cursor:pointer;
-transition:0.3s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
 }
 
 /* LIGHTBOX */
@@ -176,20 +190,19 @@ transform:scale(1.05);
 .lightbox{
 display:none;
 position:fixed;
-z-index:2000;
-padding-top:60px;
-left:0;
 top:0;
+left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.9);
 text-align:center;
+padding-top:60px;
+z-index:2000;
 }
 
 .lightbox img{
 max-width:90%;
 max-height:80%;
-border-radius:10px;
 }
 
 .lightbox span{
@@ -201,13 +214,24 @@ font-size:40px;
 cursor:pointer;
 }
 
+/* REVIEWS */
+
+.reviews{
+background:white;
+border-radius:10px;
+padding:40px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
 /* FORM */
 
 .form-container{
 max-width:500px;
 margin:auto;
 padding:30px;
-background:rgba(255,198,210,0.45);
+background:white;
 border-radius:10px;
 }
 
@@ -231,10 +255,7 @@ cursor:pointer;
 /* MAP */
 
 .map-section{
-background:url("wellness activities.jpg") center/cover no-repeat;
 text-align:center;
-padding:100px 10%;
-border-radius:10px;
 }
 
 .map-section iframe{
@@ -266,6 +287,41 @@ text-align:center;
 padding:20px;
 background:#7a1f3d;
 color:white;
+margin-top:60px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+}
+
+.logo{
+position:static;
+margin-top:10px;
+}
+
+.two-column{
+flex-direction:column;
+text-align:center;
+}
+
+.two-column img{
+width:100%;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -280,6 +336,7 @@ color:white;
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
 <a href="#booking">Book Session</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -311,13 +368,11 @@ color:white;
 
 <div>
 
-<h2>Psychosocial Support Services</h2>
+<h2>About Portia Kubheka</h2>
 
-<p>Portia Kubheka is a qualified Social Worker and Therapist with a Bachelor of Social Work degree from UNISA and a Certificate in Employee Wellness from the University of Pretoria.</p>
+<p>Portia Kubheka is a qualified Social Worker and Therapist with a Bachelor of Social Work from UNISA and a Certificate in Employee Wellness from the University of Pretoria.</p>
 
-<p>She has over 10 years of professional experience supporting individuals experiencing stress, trauma, anxiety and depression.</p>
-
-<p>Portia previously worked at the Open Door Crisis Care Centre for seven years providing counselling and psychosocial support.</p>
+<p>She has over 10 years of experience supporting individuals experiencing trauma, anxiety, stress and emotional challenges.</p>
 
 </div>
 
@@ -326,28 +381,28 @@ color:white;
 </section>
 
 
-<section id="services" class="section expertise">
+<section id="services" class="section">
 
-<h2 style="text-align:center;margin-bottom:30px">Areas of Expertise</h2>
+<h2>Areas of Expertise</h2>
 
-<ul style="max-width:700px;margin:auto">
+<div class="services-grid">
 
-<li>Trauma Debriefing</li>
-<li>Stress and Anxiety Counselling</li>
-<li>Substance Abuse Support</li>
-<li>Marriage and Relationship Counselling</li>
-<li>Pre-marital Counselling</li>
-<li>Gender Based Violence Support</li>
-<li>Parenting Guidance</li>
+<div class="service-card">Trauma Debriefing</div>
+<div class="service-card">Stress & Anxiety Counselling</div>
+<div class="service-card">Substance Abuse Support</div>
+<div class="service-card">Marriage Counselling</div>
+<div class="service-card">Pre-marital Counselling</div>
+<div class="service-card">Gender Based Violence Support</div>
+<div class="service-card">Parenting Guidance</div>
 
-</ul>
+</div>
 
 </section>
 
 
 <section id="gallery" class="section">
 
-<h2 style="text-align:center;margin-bottom:40px">Therapy Environment</h2>
+<h2>Therapy Environment</h2>
 
 <div class="gallery">
 
@@ -376,18 +431,29 @@ color:white;
 </div>
 
 
+<section id="reviews" class="section">
+
+<h2>Client Reviews</h2>
+
+<div class="reviews">
+<p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+<p>"Professional and compassionate counselling services."</p>
+<p>More reviews will appear here once your Google reviews are connected.</p>
+</div>
+
+</section>
+
+
 <section id="booking" class="section">
 
-<h2 style="text-align:center;margin-bottom:20px">Book a Counselling Session</h2>
+<h2>Book a Counselling Session</h2>
 
 <div class="form-container">
 
 <form action="https://formsubmit.co/portiakub@outlook.com" method="POST">
 
 <input type="text" name="Name" placeholder="Your Name" required>
-
 <input type="email" name="Email" placeholder="Your Email" required>
-
 <input type="text" name="Phone" placeholder="Phone Number">
 
 <textarea name="Message" placeholder="Describe the support you need"></textarea>
@@ -401,7 +467,7 @@ color:white;
 </section>
 
 
-<section id="contact" class="map-section">
+<section id="contact" class="section map-section">
 
 <h2>Visit Our Centre</h2>
 
@@ -427,6 +493,7 @@ Email: portiakub@outlook.com
 <p>Website Developed by Mthobisi Mabaso</p>
 
 </footer>
+
 
 <a class="whatsapp" href="https://wa.me/27653114025">WhatsApp</a>
 
