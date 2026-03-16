@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ISA62 Wellness | Counselling Services in Pinetown KZN</title>
+<title>ISA62 Wellness | Counselling Services Pinetown</title>
 
-<meta name="description" content="ISA62 Wellness provides professional counselling, trauma support, marriage counselling, and wellness services in Pinetown KwaZulu-Natal.">
-
-<meta name="keywords" content="Counselling Pinetown, Therapy KZN, Trauma Counselling Pinetown, Wellness Services KwaZulu Natal">
+<meta name="description" content="Professional counselling and wellness services in Pinetown KwaZulu-Natal. Trauma counselling, marriage counselling and emotional support.">
 
 <style>
 
@@ -23,17 +22,17 @@ color:#333;
 scroll-behavior:smooth;
 }
 
-/* HEADER */
+/* GLASS HEADER */
 
 header{
 position:sticky;
 top:0;
-background:#800000;
+background:rgba(128,0,0,0.65);
+backdrop-filter:blur(10px);
 display:flex;
 align-items:center;
 justify-content:space-between;
 padding:15px 40px;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
 z-index:1000;
 }
 
@@ -82,7 +81,7 @@ font-size:42px;
 
 .hero p{
 position:relative;
-color:white;
+color:#c49a6c;
 font-size:18px;
 }
 
@@ -92,20 +91,12 @@ font-size:18px;
 max-width:1100px;
 margin:auto;
 padding:70px 20px;
-animation:fadeIn 1s ease-in;
 }
 
 .section h2{
 text-align:center;
 color:#800000;
 margin-bottom:30px;
-}
-
-/* ANIMATION */
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
 }
 
 /* SERVICES */
@@ -123,11 +114,6 @@ border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 text-align:center;
 font-weight:bold;
-transition:0.3s;
-}
-
-.service-card:hover{
-transform:translateY(-6px);
 }
 
 /* PROFILE */
@@ -175,10 +161,10 @@ background:white;
 padding:20px;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
-font-style:italic;
+color:#c49a6c;
 }
 
-/* BOOKING FORM */
+/* FORM */
 
 form{
 max-width:500px;
@@ -197,10 +183,18 @@ border:1px solid #ccc;
 button{
 padding:12px;
 background:#800000;
-color:white;
+color:#c49a6c;
 border:none;
 border-radius:6px;
 cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+font-size:18px;
+color:#c49a6c;
 }
 
 /* MAP */
@@ -209,10 +203,11 @@ cursor:pointer;
 margin-top:30px;
 }
 
-/* FOOTER */
+/* GLASS FOOTER */
 
 footer{
-background:#800000;
+background:rgba(128,0,0,0.65);
+backdrop-filter:blur(10px);
 color:#c49a6c;
 text-align:center;
 padding:30px;
@@ -272,12 +267,14 @@ height:250px;
 <h1>ISA62 Wellness</h1>
 
 <nav>
+
 <a href="#about">About</a>
 <a href="#services">Expertise</a>
 <a href="#gallery">Gallery</a>
 <a href="#testimonials">Testimonials</a>
 <a href="#booking">Booking</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
@@ -348,15 +345,15 @@ ISA62 Wellness offers compassionate counselling services helping individuals and
 <div class="testimonials">
 
 <div class="testimonial">
-"Professional and caring counselling services that truly help."
+Professional and caring counselling services that truly help.
 </div>
 
 <div class="testimonial">
-"A safe place for healing and personal growth."
+A safe place for healing and personal growth.
 </div>
 
 <div class="testimonial">
-"Highly supportive and compassionate wellness support."
+Highly supportive and compassionate wellness support.
 </div>
 
 </div>
@@ -381,14 +378,21 @@ ISA62 Wellness offers compassionate counselling services helping individuals and
 
 </section>
 
-<section id="contact" class="section">
+<section id="contact" class="section contact">
 
 <h2>Contact</h2>
 
 <p>Email: portiakub@outlook.com</p>
 <p>Phone: +27 65 311 4025</p>
 <p>Phone: +27 84 555 8406</p>
-<p>Location: Pinetown, KwaZulu-Natal</p>
+
+<p>
+51 Josiah Gumede Road<br>
+Union Main<br>
+Wellness Centre<br>
+Pinetown, 3610<br>
+KwaZulu-Natal
+</p>
 
 <div class="map">
 
@@ -398,7 +402,7 @@ height="350"
 style="border:0"
 loading="lazy"
 allowfullscreen
-src="https://maps.google.com/maps?q=Pinetown%20KwaZulu%20Natal&t=&z=13&ie=UTF8&iwloc=&output=embed">
+src="https://maps.google.com/maps?q=51%20Josiah%20Gumede%20Road%20Pinetown&t=&z=15&ie=UTF8&iwloc=&output=embed">
 </iframe>
 
 </div>
@@ -442,4 +446,5 @@ setTimeout(showSlides,3000);
 </script>
 
 </body>
+
 </html>
