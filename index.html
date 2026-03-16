@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -15,8 +14,8 @@
 body{
 margin:0;
 font-family:Arial, sans-serif;
-color:#333;
 background:#ffd6e7;
+color:#333;
 }
 
 /* HEADER */
@@ -28,25 +27,23 @@ background:#800000;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:15px 30px;
+padding:15px 40px;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
 z-index:1000;
 }
 
 header h1{
 color:#c49a6c;
 margin:0;
+font-size:26px;
 }
-
-/* LOGO */
 
 .logo{
 height:60px;
 }
 
-/* NAVIGATION */
-
 nav a{
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
 color:#c49a6c;
 font-weight:bold;
@@ -58,14 +55,32 @@ font-weight:bold;
 background:url("office environment.jpg");
 background-size:cover;
 background-position:center;
-padding:120px 20px;
+padding:140px 20px;
 text-align:center;
-color:white;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
 }
 
 .hero h2{
-font-size:40px;
+position:relative;
+font-size:42px;
+color:#c49a6c;
 margin-bottom:10px;
+}
+
+.hero p{
+position:relative;
+color:#f5f5f5;
+font-size:18px;
 }
 
 /* SECTIONS */
@@ -73,38 +88,63 @@ margin-bottom:10px;
 .section{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:70px 20px;
 }
 
 .section h2{
 text-align:center;
 color:#800000;
-margin-bottom:30px;
+margin-bottom:35px;
+font-size:30px;
 }
 
 /* SERVICES */
 
 .services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
 }
 
 .service-card{
 background:white;
-padding:20px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 18px rgba(0,0,0,0.1);
 text-align:center;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
 font-weight:bold;
+transition:transform 0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-6px);
+}
+
+/* PROFILE */
+
+.profile{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.profile img{
+width:260px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.profile-text{
+flex:1;
 }
 
 /* SLIDESHOW */
 
 .slideshow{
-position:relative;
 max-width:900px;
 margin:auto;
+position:relative;
 }
 
 .slide{
@@ -113,9 +153,25 @@ display:none;
 
 .slide img{
 width:100%;
-height:400px;
+height:420px;
 object-fit:cover;
+border-radius:12px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:white;
+padding:20px;
 border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+font-style:italic;
 }
 
 /* CONTACT */
@@ -135,52 +191,37 @@ margin-top:30px;
 
 footer{
 background:#800000;
-text-align:center;
-padding:25px;
-margin-top:40px;
 color:#c49a6c;
+text-align:center;
+padding:30px;
+margin-top:50px;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 background:#25D366;
 color:white;
-font-size:20px;
-padding:15px 20px;
+padding:16px 22px;
 border-radius:50px;
+font-size:18px;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* ---------------- MOBILE VERSION ---------------- */
+/* MOBILE */
 
 @media(max-width:700px){
 
-body{
-background:#f9f9f9;
-}
-
 header{
-background:white;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+flex-direction:column;
 }
 
-header h1{
-color:#8B5A2B;
-}
-
-nav a{
-color:#8B5A2B;
-margin-left:10px;
-font-size:14px;
-}
-
-.logo{
-height:50px;
+nav{
+margin-top:10px;
 }
 
 .hero h2{
@@ -188,19 +229,17 @@ font-size:28px;
 }
 
 .slide img{
-height:250px;
+height:260px;
 }
 
-footer{
-background:white;
-color:#8B5A2B;
-box-shadow:0 -2px 8px rgba(0,0,0,0.1);
+.profile{
+flex-direction:column;
+text-align:center;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -212,12 +251,11 @@ box-shadow:0 -2px 8px rgba(0,0,0,0.1);
 <h1>ISA62 Wellness</h1>
 
 <nav>
-
 <a href="#about">About</a>
 <a href="#services">Expertise</a>
 <a href="#gallery">Gallery</a>
+<a href="#testimonials">Testimonials</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </header>
@@ -226,7 +264,7 @@ box-shadow:0 -2px 8px rgba(0,0,0,0.1);
 
 <h2>Professional Counselling & Wellness Support</h2>
 
-<p>Providing emotional support and therapy services in a safe and supportive environment.</p>
+<p>Providing emotional healing, therapy, and personal growth in a safe and supportive environment.</p>
 
 </section>
 
@@ -234,9 +272,23 @@ box-shadow:0 -2px 8px rgba(0,0,0,0.1);
 
 <h2>About ISA62 Wellness</h2>
 
+<div class="profile">
+
+<img src="Portia pic 20250509.jpg">
+
+<div class="profile-text">
+
 <p>
-ISA62 Wellness provides professional counselling and emotional support services focused on healing, personal growth and wellbeing. We support individuals, couples and families through life challenges with compassion and professionalism.
+ISA62 Wellness provides compassionate counselling services designed to support individuals, couples and families through emotional challenges, trauma, and life transitions.
 </p>
+
+<p>
+Our goal is to create a safe space where healing, growth and resilience can flourish.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
@@ -271,7 +323,28 @@ ISA62 Wellness provides professional counselling and emotional support services 
 <div class="slide"><img src="photo3.jpg"></div>
 <div class="slide"><img src="photo4.jpg"></div>
 <div class="slide"><img src="photo5.jpg"></div>
-<div class="slide"><img src="Portia pic 20250509.jpg"></div>
+
+</div>
+
+</section>
+
+<section id="testimonials" class="section">
+
+<h2>Client Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+"ISA62 Wellness helped me through one of the most difficult times of my life."
+</div>
+
+<div class="testimonial">
+"The counselling support was professional, compassionate and life-changing."
+</div>
+
+<div class="testimonial">
+"A safe environment where healing truly begins."
+</div>
 
 </div>
 
@@ -282,12 +355,8 @@ ISA62 Wellness provides professional counselling and emotional support services 
 <h2>Contact</h2>
 
 <p>Email: portiakub@outlook.com</p>
-
 <p>Phone: +27 65 311 4025</p>
-
 <p>Phone: +27 84 555 8406</p>
-
-<p>Location: South Africa</p>
 
 <div class="map">
 
@@ -312,18 +381,16 @@ src="https://maps.google.com/maps?q=Johannesburg&t=&z=13&ie=UTF8&iwloc=&output=e
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/27653114025" target="_blank">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/27653114025" target="_blank">WhatsApp</a>
 
 <script>
 
-let slideIndex = 0;
+let slideIndex=0;
 showSlides();
 
 function showSlides(){
 
-let slides = document.getElementsByClassName("slide");
+let slides=document.getElementsByClassName("slide");
 
 for(let i=0;i<slides.length;i++){
 slides[i].style.display="none";
@@ -331,8 +398,8 @@ slides[i].style.display="none";
 
 slideIndex++;
 
-if(slideIndex > slides.length){
-slideIndex = 1;
+if(slideIndex>slides.length){
+slideIndex=1;
 }
 
 slides[slideIndex-1].style.display="block";
@@ -344,5 +411,4 @@ setTimeout(showSlides,3000);
 </script>
 
 </body>
-
 </html>
