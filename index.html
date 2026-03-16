@@ -10,42 +10,45 @@
 
 <style>
 
+/* GENERAL */
+
 body{
 margin:0;
 font-family:Arial, sans-serif;
 color:#333;
-background:#f9f9f9;
+background:#ffd6e7;
 }
 
-/* STICKY HEADER */
+/* HEADER */
 
 header{
 position:sticky;
 top:0;
-background:white;
+background:#800000;
 display:flex;
 align-items:center;
 justify-content:space-between;
 padding:15px 30px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
 z-index:1000;
 }
 
 header h1{
-color:#8B5A2B;
+color:#c49a6c;
 margin:0;
 }
+
+/* LOGO */
 
 .logo{
 height:60px;
 }
 
-/* NAV */
+/* NAVIGATION */
 
 nav a{
 margin-left:20px;
 text-decoration:none;
-color:#8B5A2B;
+color:#c49a6c;
 font-weight:bold;
 }
 
@@ -65,7 +68,7 @@ font-size:40px;
 margin-bottom:10px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 .section{
 max-width:1100px;
@@ -75,7 +78,7 @@ padding:60px 20px;
 
 .section h2{
 text-align:center;
-color:#8B5A2B;
+color:#800000;
 margin-bottom:30px;
 }
 
@@ -122,7 +125,7 @@ text-align:center;
 font-size:18px;
 }
 
-/* GOOGLE MAP */
+/* MAP */
 
 .map{
 margin-top:30px;
@@ -131,12 +134,11 @@ margin-top:30px;
 /* FOOTER */
 
 footer{
-background:white;
+background:#800000;
 text-align:center;
 padding:25px;
 margin-top:40px;
-color:#8B5A2B;
-box-shadow:0 -2px 8px rgba(0,0,0,0.1);
+color:#c49a6c;
 }
 
 /* WHATSAPP BUTTON */
@@ -154,15 +156,25 @@ text-decoration:none;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* MOBILE */
+/* ---------------- MOBILE VERSION ---------------- */
 
 @media(max-width:700px){
 
-.hero h2{
-font-size:28px;
+body{
+background:#f9f9f9;
+}
+
+header{
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1{
+color:#8B5A2B;
 }
 
 nav a{
+color:#8B5A2B;
 margin-left:10px;
 font-size:14px;
 }
@@ -171,8 +183,18 @@ font-size:14px;
 height:50px;
 }
 
+.hero h2{
+font-size:28px;
+}
+
 .slide img{
 height:250px;
+}
+
+footer{
+background:white;
+color:#8B5A2B;
+box-shadow:0 -2px 8px rgba(0,0,0,0.1);
 }
 
 }
@@ -244,29 +266,12 @@ ISA62 Wellness provides professional counselling and emotional support services 
 
 <div class="slideshow">
 
-<div class="slide">
-<img src="photo1.jpg">
-</div>
-
-<div class="slide">
-<img src="photo2.jpg">
-</div>
-
-<div class="slide">
-<img src="photo3.jpg">
-</div>
-
-<div class="slide">
-<img src="photo4.jpg">
-</div>
-
-<div class="slide">
-<img src="photo5.jpg">
-</div>
-
-<div class="slide">
-<img src="Portia pic 20250509.jpg">
-</div>
+<div class="slide"><img src="photo1.jpg"></div>
+<div class="slide"><img src="photo2.jpg"></div>
+<div class="slide"><img src="photo3.jpg"></div>
+<div class="slide"><img src="photo4.jpg"></div>
+<div class="slide"><img src="photo5.jpg"></div>
+<div class="slide"><img src="Portia pic 20250509.jpg"></div>
 
 </div>
 
@@ -312,8 +317,6 @@ WhatsApp
 </a>
 
 <script>
-
-/* SLIDESHOW */
 
 let slideIndex = 0;
 showSlides();
