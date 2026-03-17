@@ -44,7 +44,6 @@ font-weight:bold;
 
 .hero{
 height:650px;
-background:url("therapy1.jpg");
 background-size:cover;
 background-position:center;
 display:flex;
@@ -92,11 +91,11 @@ border-radius:8px;
 /* ABOUT */
 
 #about{
-background:url("therapy2.jpg");
+background:url("https://portiakub.github.io/isa61wellness/photo2.jpg");
 }
 
 #about p{
-background:rgba(255,255,255,0.7);
+background:rgba(255,255,255,0.75);
 padding:15px;
 border-radius:10px;
 max-width:700px;
@@ -106,7 +105,7 @@ margin:auto;
 /* SERVICES */
 
 #services{
-background:url("therapy3.jpg");
+background:url("https://portiakub.github.io/isa61wellness/photo3.jpg");
 }
 
 .services-grid{
@@ -141,7 +140,7 @@ border-radius:10px;
 /* BOOKING */
 
 #booking{
-background:url("therapy4.jpg");
+background:url("https://portiakub.github.io/isa61wellness/photo4.jpg");
 background-size:cover;
 padding:80px 20px;
 }
@@ -174,7 +173,7 @@ font-weight:bold;
 /* CONTACT */
 
 #contact{
-background:url("therapy2.jpg");
+background:url("https://portiakub.github.io/isa61wellness/photo1.jpg");
 }
 
 iframe{
@@ -224,7 +223,7 @@ text-decoration:none;
 
 <section class="hero" id="hero">
 
-<img src="logo.png" class="hero-logo">
+<img src="https://portiakub.github.io/isa61wellness/logo.png" class="hero-logo">
 
 <h1>ISA62 Wellness</h1>
 <p>Empowering Victims to be Victorious</p>
@@ -259,10 +258,10 @@ We provide compassionate counselling services helping individuals and families o
 <h2>Our Environment</h2>
 
 <div class="gallery">
-<img src="therapy1.jpg">
-<img src="therapy2.jpg">
-<img src="therapy3.jpg">
-<img src="therapy4.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo1.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo2.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo3.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo4.jpg">
 </div>
 
 </section>
@@ -301,10 +300,15 @@ We provide compassionate counselling services helping individuals and families o
 
 <script>
 
-/* HERO ROTATION */
+/* HERO ROTATION USING YOUR IMAGES */
 
 let hero=document.getElementById("hero");
-let images=["therapy1.jpg","therapy2.jpg","therapy3.jpg"];
+
+let images=[
+"https://portiakub.github.io/isa61wellness/photo1.jpg",
+"https://portiakub.github.io/isa61wellness/photo2.jpg",
+"https://portiakub.github.io/isa61wellness/photo3.jpg"
+];
 
 let i=0;
 
