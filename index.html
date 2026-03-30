@@ -64,6 +64,48 @@ padding:60px 20px;
 text-align:center;
 }
 
+/* ✅ NEW BACKGROUND FOR BOOKING */
+.booking-bg{
+background:url('https://portiakub.github.io/isa61wellness/photo6.jpg') no-repeat center/cover;
+position:relative;
+}
+
+.booking-bg::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.85);
+}
+
+.booking-bg *{
+position:relative;
+z-index:1;
+}
+
+/* ✅ NEW BACKGROUND FOR MAP */
+.map-bg{
+background:url('https://portiakub.github.io/isa61wellness/photo7.jpg') no-repeat center/cover;
+position:relative;
+}
+
+.map-bg::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.85);
+}
+
+.map-bg *{
+position:relative;
+z-index:1;
+}
+
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -191,7 +233,7 @@ font-weight:bold;
 <h2>About ISA61 Wellness</h2>
 <p>
 Located at <strong>45 Josiah Gumede Road, Pinetown</strong>, ISA61 Wellness provides trusted counselling services in Durban and surrounding areas.
-We help individuals overcome trauma, anxiety, depression, and relationship challenges in a safe and supportive environment.
+We help individuals overcome trauma, anxiety, depression, and relationship challenges.
 </p>
 </section>
 
@@ -229,7 +271,8 @@ We help individuals overcome trauma, anxiety, depression, and relationship chall
 </div>
 </section>
 
-<section id="booking" class="section">
+<!-- ✅ BOOKING WITH BACKGROUND -->
+<section id="booking" class="section booking-bg">
 <h2>Book a Session</h2>
 
 <form onsubmit="sendWhatsApp(event)">
@@ -241,7 +284,8 @@ We help individuals overcome trauma, anxiety, depression, and relationship chall
 
 </section>
 
-<section class="section">
+<!-- ✅ MAP WITH BACKGROUND -->
+<section class="section map-bg">
 <h2>Visit Us</h2>
 <p><strong>45 Josiah Gumede Road, Pinetown, Durban</strong></p>
 
