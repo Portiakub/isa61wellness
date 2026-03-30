@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ISA61 Wellness | Counselling Pinetown & Durban</title>
+<title>ISA61 Wellness | Counselling Services in Durban & Pinetown</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-font-family:Arial;
+font-family:Arial, sans-serif;
 background:#ffe4ef;
 color:#800000;
 }
@@ -37,16 +37,18 @@ align-items:center;
 text-align:center;
 background-size:cover;
 background-position:center;
+transition:0.5s ease;
 }
 
 .hero img{
 width:120px;
+margin-bottom:10px;
 }
 
 .hero h1{
 color:#c49a6c;
 background:rgba(255,255,255,0.7);
-padding:10px;
+padding:10px 20px;
 border-radius:10px;
 }
 
@@ -62,7 +64,7 @@ gap:20px;
 }
 
 .card{
-background:rgba(128,0,0,0.8);
+background:rgba(128,0,0,0.85);
 color:white;
 border-radius:10px;
 overflow:hidden;
@@ -72,6 +74,10 @@ overflow:hidden;
 width:100%;
 height:160px;
 object-fit:cover;
+}
+
+.card p{
+padding:10px;
 }
 
 .gallery{
@@ -100,11 +106,11 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px;
+padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
+font-weight:bold;
 }
-
 </style>
 </head>
 
@@ -129,7 +135,10 @@ text-decoration:none;
 
 <section id="about" class="section">
 <h2>About</h2>
-<p>Professional counselling services in Pinetown & Durban helping individuals heal and grow.</p>
+<p>
+ISA61 Wellness provides professional counselling services in Durban and Pinetown,
+helping individuals overcome trauma, anxiety, depression, and relationship challenges.
+</p>
 </section>
 
 <section id="services" class="section">
@@ -188,24 +197,25 @@ text-decoration:none;
 <a class="whatsapp" href="https://wa.me/27653114025">WhatsApp</a>
 
 <script>
+let hero = document.getElementById("hero");
 
-let hero=document.getElementById("hero");
-
-let images=[
+let images = [
 "https://portiakub.github.io/isa61wellness/photo1.jpg",
 "https://portiakub.github.io/isa61wellness/photo5.jpg",
 "https://portiakub.github.io/isa61wellness/photo9.jpg",
 "https://portiakub.github.io/isa61wellness/photo12.jpg"
 ];
 
-let i=0;
+let i = 0;
 
-setInterval(()=>{
-hero.style.backgroundImage="url('"+images[i]+"')";
+function changeBackground(){
+hero.style.backgroundImage = "url('" + images[i] + "')";
 i++;
-if(i>=images.length){i=0;}
-},5000);
+if(i >= images.length){ i = 0; }
+}
 
+changeBackground();
+setInterval(changeBackground, 5000);
 </script>
 
 </body>
