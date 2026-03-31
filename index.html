@@ -3,102 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ISA61 Wellness</title>
+
+<title>ISA61 Wellness | Counselling in Pinetown & Durban | Book Therapy Session</title>
+
+<meta name="description" content="ISA61 Wellness offers professional counselling in Pinetown and Durban. Trauma, anxiety, depression, and relationship therapy. Visit us at 45 Josiah Gumede Road or book via WhatsApp.">
+
+<meta name="keywords" content="Counselling Pinetown, Therapy Durban, Trauma counselling Pinetown, Anxiety help Durban, Depression counselling Pinetown, Marriage counselling Durban">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
+font-family: 'Segoe UI', sans-serif;
+background:#ffe4ef;
 color:#800000;
-background:#fff0f5;
+line-height:1.6;
 }
 
 header{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:center;
-background:rgba(128,0,0,0.6);
-backdrop-filter:blur(10px);
+background:#800000;
 padding:15px;
+text-align:center;
+position:sticky;
+top:0;
 z-index:1000;
 }
 
-header a{
-color:#fff;
-margin:0 15px;
+nav a{
+color:white;
+margin:15px;
 text-decoration:none;
 font-weight:bold;
 }
 
 .hero{
-height:100vh;
-background:url('images/photo1.jpg') center/cover no-repeat;
+height:650px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background-size:cover;
+background-position:center;
+transition:0.5s;
+}
+
+.hero img{
+width:120px;
 }
 
 .hero h1{
-color:#A0522D;
-font-size:48px;
+color:#c49a6c;
+background:rgba(255,255,255,0.7);
+padding:10px 20px;
+border-radius:10px;
 }
 
-section{
-padding:80px 20px;
+.section{
+padding:60px 20px;
 text-align:center;
+}
+
+/* ✅ CLEAR BACKGROUND (NO OVERLAY) */
+.booking-bg{
+background:url('https://portiakub.github.io/isa61wellness/photo6.jpg') no-repeat center/cover;
+color:#800000;
+}
+
+.map-bg{
+background:url('https://portiakub.github.io/isa61wellness/photo7.jpg') no-repeat center/cover;
+color:#800000;
 }
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
 .card{
-background:rgba(128,0,0,0.2);
-padding:20px;
-border-radius:15px;
+background:rgba(128,0,0,0.85);
+color:white;
+border-radius:10px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
 }
 
 .card img{
 width:100%;
-height:200px;
+height:160px;
 object-fit:cover;
-border-radius:10px;
+}
+
+.card p{
+padding:10px;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:10px;
 }
 
 .gallery img{
 width:100%;
-height:200px;
+height:250px;
 object-fit:cover;
 border-radius:10px;
 }
 
-.booking{
-background:url('images/photo2.jpg') center/cover no-repeat;
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-/* ✅ ONLY CHANGE — YOUR BACKGROUND IMAGE */
-.map-bg{
-background:url('images/photo01.jpg') center/cover no-repeat;
-color:#800000;
+.testimonial{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input, textarea{
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#800000;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+iframe{
+width:100%;
+height:300px;
+border:0;
+border-radius:10px;
 }
 
 footer{
-background:rgba(128,0,0,0.7);
+background:#800000;
 color:white;
 text-align:center;
 padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 </style>
 </head>
@@ -106,90 +183,124 @@ padding:20px;
 <body>
 
 <header>
-<a href="#">Home</a>
+<nav>
+<a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
+<a href="#testimonials">Reviews</a>
+<a href="#booking">Book</a>
+</nav>
 </header>
 
-<div class="hero">
+<section class="hero" id="hero">
+<img src="https://portiakub.github.io/isa61wellness/logo.png">
 <h1>ISA61 Wellness</h1>
-<p>Healing • Growth • Support</p>
-</div>
+<p>Professional Counselling in Pinetown & Durban</p>
+</section>
 
-<section id="services">
-<h2>Our Expertise</h2>
+<section id="about" class="section">
+<h2>About ISA61 Wellness</h2>
+<p>
+Located at <strong>45 Josiah Gumede Road, Pinetown</strong>, ISA61 Wellness provides trusted counselling services in Durban and surrounding areas.
+We help individuals overcome trauma, anxiety, depression, and relationship challenges.
+</p>
+</section>
+
+<section id="services" class="section">
+<h2>Our Services</h2>
 <div class="services">
-
-<div class="card">
-<img src="images/photo1.jpg">
-<p>Loss & Grief</p>
-</div>
-
-<div class="card">
-<img src="images/photo2.jpg">
-<p>Marriage Issues</p>
-</div>
-
-<div class="card">
-<img src="images/photo3.jpg">
-<p>Parenting Skills</p>
-</div>
-
-<div class="card">
-<img src="images/photo4.jpg">
-<p>Divorce Support</p>
-</div>
-
-<div class="card">
-<img src="images/photo11.jpg">
-<p>Stress Management</p>
-</div>
-
-<div class="card">
-<img src="images/photo13.jpg">
-<p>Depression Therapy</p>
-</div>
-
+<div class="card"><img src="https://portiakub.github.io/isa61wellness/photo1.jpg"><p>Trauma Counselling</p></div>
+<div class="card"><img src="https://portiakub.github.io/isa61wellness/photo2.jpg"><p>Anxiety Support</p></div>
+<div class="card"><img src="https://portiakub.github.io/isa61wellness/photo3.jpg"><p>Depression Support</p></div>
+<div class="card"><img src="https://portiakub.github.io/isa61wellness/photo4.jpg"><p>Marriage Counselling</p></div>
 </div>
 </section>
 
-<section id="gallery">
+<section id="gallery" class="section">
 <h2>Gallery</h2>
 <div class="gallery">
-<img src="images/photo5.jpg">
-<img src="images/photo6.jpg">
-<img src="images/photo7.jpg">
-<img src="images/photo8.jpg">
-<img src="images/photo9.jpg">
-<img src="images/photo10.jpg">
-<img src="images/photo11.jpg">
-<img src="images/photo12.jpg">
-<img src="images/photo13.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo5.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo6.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo7.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo8.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo9.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo10.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo11.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo12.jpg">
+<img src="https://portiakub.github.io/isa61wellness/photo13.jpg">
 </div>
 </section>
 
-<section class="booking">
-<h2>Book a Session</h2>
-<p>Contact us via WhatsApp to book your session.</p>
-<a href="https://wa.me/27739761359" target="_blank">Book Now</a>
+<section id="testimonials" class="section">
+<h2>Client Reviews</h2>
+<div class="testimonials">
+<div class="testimonial">"Life-changing counselling experience. Highly recommended." ⭐⭐⭐⭐⭐</div>
+<div class="testimonial">"Professional and very supportive therapist." ⭐⭐⭐⭐⭐</div>
+<div class="testimonial">"Helped me overcome anxiety and regain confidence." ⭐⭐⭐⭐⭐</div>
+</div>
 </section>
 
-<section class="map-bg" id="contact">
-<h2>Find Us</h2>
-<p>45 Josiah Gumede Road, Pinetown</p>
+<!-- ✅ CLEAR BACKGROUND -->
+<section id="booking" class="section booking-bg">
+<h2>Book a Session</h2>
 
-<iframe 
-src="https://www.google.com/maps?q=45%20Josiah%20Gumede%20Road%20Pinetown&output=embed"
-width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
-</iframe>
+<form onsubmit="sendWhatsApp(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Your Phone" required>
+<textarea id="message" placeholder="Your Message"></textarea>
+<button type="submit">Book via WhatsApp</button>
+</form>
 
+</section>
+
+<!-- ✅ CLEAR BACKGROUND -->
+<section class="section map-bg">
+<h2>Visit Us</h2>
+<p><strong>45 Josiah Gumede Road, Pinetown, Durban</strong></p>
+
+<iframe src="https://maps.google.com/maps?q=45%20Josiah%20Gumede%20Road%20Pinetown&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
 </section>
 
 <footer>
-<p>© ISA61 Wellness</p>
-<p>Developed by Mthobisi</p>
+<p>© 2026 ISA61 Wellness</p>
+<p>Developed by Mthobisi Mabaso</p>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/27653114025?text=Hello%20I%20would%20like%20to%20book%20a%20session">Chat on WhatsApp</a>
+
+<script>
+let hero=document.getElementById("hero");
+
+let images=[
+"https://portiakub.github.io/isa61wellness/photo1.jpg",
+"https://portiakub.github.io/isa61wellness/photo5.jpg",
+"https://portiakub.github.io/isa61wellness/photo9.jpg",
+"https://portiakub.github.io/isa61wellness/photo12.jpg"
+];
+
+let i=0;
+function changeBG(){
+hero.style.backgroundImage="url('"+images[i]+"')";
+i++;
+if(i>=images.length){i=0;}
+}
+changeBG();
+setInterval(changeBG,5000);
+
+function sendWhatsApp(e){
+e.preventDefault();
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("message").value;
+
+let url="https://wa.me/27653114025?text="
++ "Hello, my name is "+name+"%0A"
++ "Phone: "+phone+"%0A"
++ "Message: "+msg;
+
+window.open(url,"_blank");
+}
+</script>
 
 </body>
 </html>
