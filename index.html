@@ -20,4 +20,278 @@ width:100%;
 display:flex;
 justify-content:center;
 background:rgba(128,0,0,0.6);
-backdrop-filter:blur(10
+backdrop-filter:blur(10px);
+padding:15px;
+z-index:1000;
+}
+
+header a{
+color:#fff;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:100vh;
+background:url('photo1.jpg') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+color:#A0522D;
+font-size:48px;
+}
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(128,0,0,0.2);
+padding:20px;
+border-radius:15px;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.booking{
+background:url('photo2.jpg') center/cover no-repeat;
+}
+
+.map-bg{
+background:url('images/photo01.jpg') center/cover no-repeat;
+color:#800000;
+}
+
+/* FORM */
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+background:rgba(255,255,255,0.9);
+padding:20px;
+border-radius:10px;
+}
+
+input, select, textarea{
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#800000;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:1000;
+}
+
+footer{
+background:rgba(128,0,0,0.7);
+color:white;
+text-align:center;
+padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</header>
+
+<div class="hero">
+<h1>ISA61 Wellness</h1>
+<p>Healing • Growth • Support</p>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Expertise</h2>
+
+<div class="services">
+
+<div class="card">
+<img src="photo1.jpg">
+<p>Loss & Grief</p>
+</div>
+
+<div class="card">
+<img src="photo2.jpg">
+<p>Marriage Issues</p>
+</div>
+
+<div class="card">
+<img src="photo3.jpg">
+<p>Parenting Skills</p>
+</div>
+
+<div class="card">
+<img src="photo4.jpg">
+<p>Divorce Support</p>
+</div>
+
+<div class="card">
+<img src="photo11.jpg">
+<p>Stress Management</p>
+</div>
+
+<div class="card">
+<img src="photo12.jpg">
+<p>Anxiety Therapy</p>
+</div>
+
+<div class="card">
+<img src="photo13.jpg">
+<p>Depression Support</p>
+</div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h2>Gallery</h2>
+
+<div class="gallery">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+<img src="photo7.jpg">
+<img src="photo8.jpg">
+<img src="photo9.jpg">
+<img src="photo10.jpg">
+<img src="photo11.jpg">
+<img src="photo12.jpg">
+<img src="photo13.jpg">
+</div>
+
+</section>
+
+<!-- BOOKING -->
+<section class="booking">
+<h2>Book a Session</h2>
+
+<form onsubmit="sendWhatsApp(event)">
+
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Your Phone" required>
+
+<select id="service">
+<option>Loss & Grief</option>
+<option>Marriage Counselling</option>
+<option>Parenting Skills</option>
+<option>Divorce Support</option>
+<option>Stress Management</option>
+<option>Anxiety Therapy</option>
+<option>Depression Support</option>
+</select>
+
+<input type="date" id="date" required>
+<input type="time" id="time" required>
+
+<textarea id="message" placeholder="Additional Message"></textarea>
+
+<button type="submit">Book via WhatsApp</button>
+
+</form>
+</section>
+
+<!-- MAP -->
+<section class="map-bg" id="contact">
+<h2>Find Us</h2>
+<p>45 Josiah Gumede Road, Pinetown</p>
+
+<iframe 
+src="https://www.google.com/maps?q=45%20Josiah%20Gumede%20Road%20Pinetown&output=embed"
+width="100%" height="300" style="border:0;" allowfullscreen>
+</iframe>
+
+</section>
+
+<footer>
+<p>© ISA61 Wellness</p>
+<p>Developed by Mthobisi</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/27739761359?text=Hello%20I%20would%20like%20to%20book%20a%20session">
+Chat on WhatsApp
+</a>
+
+<script>
+function sendWhatsApp(e){
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let service=document.getElementById("service").value;
+let date=document.getElementById("date").value;
+let time=document.getElementById("time").value;
+let msg=document.getElementById("message").value;
+
+let url="https://wa.me/27739761359?text="
++ "Hello, my name is "+name+"%0A"
++ "Phone: "+phone+"%0A"
++ "Service: "+service+"%0A"
++ "Date: "+date+"%0A"
++ "Time: "+time+"%0A"
++ "Message: "+msg;
+
+window.open(url,"_blank");
+}
+</script>
+
+</body>
+</html>
