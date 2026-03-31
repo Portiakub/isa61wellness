@@ -34,12 +34,14 @@ font-weight:bold;
 
 .hero{
 height:100vh;
-background:url('photo1.jpg') center/cover no-repeat;
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
 text-align:center;
+background-size:cover;
+background-position:center;
+transition:background-image 1s ease-in-out;
 }
 
 .hero h1{
@@ -150,7 +152,8 @@ padding:20px;
 <a href="#contact">Contact</a>
 </header>
 
-<div class="hero">
+<!-- 🔥 HERO -->
+<div class="hero" id="hero">
 <h1>ISA61 Wellness</h1>
 <p>Healing • Growth • Support</p>
 </div>
@@ -159,50 +162,19 @@ padding:20px;
 <h2>Our Expertise</h2>
 
 <div class="services">
+<div class="card"><img src="photo1.jpg"><p>Loss & Grief</p></div>
+<div class="card"><img src="photo2.jpg"><p>Marriage Issues</p></div>
+<div class="card"><img src="photo3.jpg"><p>Parenting Skills</p></div>
+<div class="card"><img src="photo4.jpg"><p>Divorce Support</p></div>
 
-<div class="card">
-<img src="photo1.jpg">
-<p>Loss & Grief</p>
-</div>
-
-<div class="card">
-<img src="photo2.jpg">
-<p>Marriage Issues</p>
-</div>
-
-<div class="card">
-<img src="photo3.jpg">
-<p>Parenting Skills</p>
-</div>
-
-<div class="card">
-<img src="photo4.jpg">
-<p>Divorce Support</p>
-</div>
-
-<!-- ✅ SAME CARDS — ONLY IMAGES REPLACED -->
-
-<div class="card">
-<img src="photo13.jpg">
-<p>Stress Management</p>
-</div>
-
-<div class="card">
-<img src="photo11.jpg">
-<p>Anxiety Therapy</p>
-</div>
-
-<div class="card">
-<img src="photo10.jpg">
-<p>Depression Support</p>
-</div>
-
+<div class="card"><img src="photo13.jpg"><p>Stress Management</p></div>
+<div class="card"><img src="photo11.jpg"><p>Anxiety Therapy</p></div>
+<div class="card"><img src="photo10.jpg"><p>Depression Support</p></div>
 </div>
 </section>
 
 <section id="gallery">
 <h2>Gallery</h2>
-
 <div class="gallery">
 <img src="photo5.jpg">
 <img src="photo6.jpg">
@@ -214,7 +186,6 @@ padding:20px;
 <img src="photo12.jpg">
 <img src="photo13.jpg">
 </div>
-
 </section>
 
 <section class="booking">
@@ -236,12 +207,10 @@ padding:20px;
 
 <input type="date" id="date" required>
 <input type="time" id="time" required>
-
 <textarea id="message" placeholder="Additional Message"></textarea>
 
 <button type="submit">Book via WhatsApp</button>
 </form>
-
 </section>
 
 <section class="map-bg" id="contact">
@@ -252,7 +221,6 @@ padding:20px;
 src="https://www.google.com/maps?q=45%20Josiah%20Gumede%20Road%20Pinetown&output=embed"
 width="100%" height="300" style="border:0;" allowfullscreen>
 </iframe>
-
 </section>
 
 <footer>
@@ -263,6 +231,27 @@ width="100%" height="300" style="border:0;" allowfullscreen>
 <a class="whatsapp" href="https://wa.me/27739761359?text=Hello%20I%20would%20like%20to%20book%20a%20session">
 Chat on WhatsApp
 </a>
+
+<!-- 🔥 HERO ROTATION (FINAL SET) -->
+<script>
+const images = [
+"photo1.jpg",
+"photo11.jpg",
+"photo10.jpg",
+"photo13.jpg"
+];
+
+let index = 0;
+const hero = document.getElementById("hero");
+
+function changeHero(){
+hero.style.backgroundImage = "url('" + images[index] + "')";
+index = (index + 1) % images.length;
+}
+
+setInterval(changeHero, 2000);
+changeHero();
+</script>
 
 <script>
 function sendWhatsApp(e){
