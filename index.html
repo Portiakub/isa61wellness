@@ -88,10 +88,48 @@ border-radius:10px;
 background:url('photo2.jpg') center/cover no-repeat;
 }
 
-/* ✅ ONLY THIS USES IMAGES FOLDER */
+/* ✅ MAP BACKGROUND */
 .map-bg{
 background:url('images/photo01.jpg') center/cover no-repeat;
 color:#800000;
+}
+
+/* ✅ BOOKING FORM */
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input, textarea{
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#800000;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* ✅ WHATSAPP FLOAT BUTTON */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:1000;
 }
 
 footer{
@@ -169,10 +207,17 @@ padding:20px;
 </div>
 </section>
 
+<!-- ✅ BOOKING FORM RESTORED -->
 <section class="booking">
 <h2>Book a Session</h2>
-<p>Contact us via WhatsApp to book your session.</p>
-<a href="https://wa.me/27739761359" target="_blank">Book Now</a>
+
+<form onsubmit="sendWhatsApp(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Your Phone" required>
+<textarea id="message" placeholder="Your Message"></textarea>
+<button type="submit">Book via WhatsApp</button>
+</form>
+
 </section>
 
 <section class="map-bg" id="contact">
@@ -190,6 +235,28 @@ width="100%" height="300" style="border:0;" allowfullscreen>
 <p>© ISA61 Wellness</p>
 <p>Developed by Mthobisi</p>
 </footer>
+
+<!-- ✅ WHATSAPP FLOAT BUTTON -->
+<a class="whatsapp" href="https://wa.me/27739761359?text=Hello%20I%20would%20like%20to%20book%20a%20session">
+Chat on WhatsApp
+</a>
+
+<script>
+function sendWhatsApp(e){
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("message").value;
+
+let url="https://wa.me/27739761359?text="
++ "Hello, my name is "+name+"%0A"
++ "Phone: "+phone+"%0A"
++ "Message: "+msg;
+
+window.open(url,"_blank");
+}
+</script>
 
 </body>
 </html>
